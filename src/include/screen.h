@@ -39,13 +39,13 @@ typedef struct {
 
 typedef struct {
     uint32_t number;           // Number of this output (e.g. OUTPUT_A = 0 etc)
-    uint32_t screen_count;     // How many monitors per output (e.g. Output A is Windows with 3 monitors)
-    uint32_t screen_index;     // Current active screen
-    int32_t speed_x;           // Mouse speed per output, in direction X
-    int32_t speed_y;           // Mouse speed per output, in direction Y
+    uint32_t __unused_screen_count;     // How many monitors per output (e.g. Output A is Windows with 3 monitors)
+    uint32_t __unused_screen_index;     // Current active screen
+    int32_t __unused_speed_x;           // Mouse speed per output, in direction X
+    int32_t __unused_speed_y;           // Mouse speed per output, in direction Y
     border_size_t __unused_border;      // Screen border size/offset to keep cursor at same height when switching
     uint8_t os;                // Operating system on this output
-    uint8_t pos;               // Screen position on this output
+    uint8_t __unused_pos;               // Screen position on this output
     uint8_t mouse_park_pos;    // Where the mouse goes after switch
     screensaver_t screensaver; // Screensaver parameters for this output
 } output_t;

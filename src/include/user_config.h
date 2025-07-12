@@ -51,38 +51,6 @@
 #define HOTKEY_TOGGLE    HID_KEY_CAPS_LOCK
 
 /**================================================== *
- * ==============  Mouse Speed Factor  ============== *
- * ================================================== *
- *
- * This affects how fast the mouse moves.
- *
- * MOUSE_SPEED_A_FACTOR_X: [1-128], mouse moves at this speed in X direction
- * MOUSE_SPEED_A_FACTOR_Y: [1-128], mouse moves at this speed in Y direction
- *
- * JUMP_THRESHOLD: [0-32768], sets the "force" you need to use to drag the
- * mouse to another screen, 0 meaning no force needed at all, and ~500 some force
- * needed, ~1000 no accidental jumps, you need to really mean it.
- *
- * This is now configurable per-screen.
- *
- * ENABLE_ACCELERATION: [0-1], disables or enables mouse acceleration.
- *
- * */
-
-/* Output A values, default is for the most common ~ 16:9 ratio screen */
-#define MOUSE_SPEED_A_FACTOR_X 16
-#define MOUSE_SPEED_A_FACTOR_Y 28
-
-/* Output B values, default is for the most common ~ 16:9 ratio screen */
-#define MOUSE_SPEED_B_FACTOR_X 16
-#define MOUSE_SPEED_B_FACTOR_Y 28
-
-#define JUMP_THRESHOLD 0
-
-/* Mouse acceleration */
-#define ENABLE_ACCELERATION 1
-
-/**================================================== *
  * ==============  Screensaver Config  ============== *
  * ================================================== *
  *
