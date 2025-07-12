@@ -74,10 +74,10 @@ typedef struct {
 
     uint8_t kbd_led_as_indicator;
     uint8_t hotkey_toggle;
-    uint8_t enable_acceleration;
+    uint8_t __unused_enable_acceleration;
 
     uint8_t enforce_ports;
-    uint16_t jump_threshold;
+    uint16_t __unused_jump_threshold;
 
     output_t output[NUM_SCREENS];
     uint32_t _reserved;

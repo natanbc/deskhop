@@ -19,13 +19,13 @@ const field_map_t api_field_map[] = {
 
     /* Output A */
     { 10, false, UINT32, 4, offsetof(device_t, config.output[0].number) },
-    { 11, false, UINT32, 4, offsetof(device_t, config.output[0].screen_count) },
-    { 12, false, INT32,  4, offsetof(device_t, config.output[0].speed_x) },
-    { 13, false, INT32,  4, offsetof(device_t, config.output[0].speed_y) },
+    { 11, false, UINT32, 4, offsetof(device_t, config.output[0].__unused_screen_count) },
+    { 12, false, INT32,  4, offsetof(device_t, config.output[0].__unused_speed_x) },
+    { 13, false, INT32,  4, offsetof(device_t, config.output[0].__unused_speed_y) },
     { 14, false, INT32,  4, offsetof(device_t, config.output[0].__unused_border.top) },
     { 15, false, INT32,  4, offsetof(device_t, config.output[0].__unused_border.bottom) },
     { 16, false, UINT8,  1, offsetof(device_t, config.output[0].os) },
-    { 17, false, UINT8,  1, offsetof(device_t, config.output[0].pos) },
+    { 17, false, UINT8,  1, offsetof(device_t, config.output[0].__unused_pos) },
     { 18, false, UINT8,  1, offsetof(device_t, config.output[0].mouse_park_pos) },
     { 19, false, UINT8,  1, offsetof(device_t, config.output[0].screensaver.mode) },
     { 20, false, UINT8,  1, offsetof(device_t, config.output[0].screensaver.only_if_inactive) },
@@ -36,13 +36,13 @@ const field_map_t api_field_map[] = {
 
     /* Output B */
     { 40, false, UINT32, 4, offsetof(device_t, config.output[1].number) },
-    { 41, false, UINT32, 4, offsetof(device_t, config.output[1].screen_count) },
-    { 42, false, INT32,  4, offsetof(device_t, config.output[1].speed_x) },
-    { 43, false, INT32,  4, offsetof(device_t, config.output[1].speed_y) },
+    { 41, false, UINT32, 4, offsetof(device_t, config.output[1].__unused_screen_count) },
+    { 42, false, INT32,  4, offsetof(device_t, config.output[1].__unused_speed_x) },
+    { 43, false, INT32,  4, offsetof(device_t, config.output[1].__unused_speed_y) },
     { 44, false, INT32,  4, offsetof(device_t, config.output[1].__unused_border.top) },
     { 45, false, INT32,  4, offsetof(device_t, config.output[1].__unused_border.bottom) },
     { 46, false, UINT8,  1, offsetof(device_t, config.output[1].os) },
-    { 47, false, UINT8,  1, offsetof(device_t, config.output[1].pos) },
+    { 47, false, UINT8,  1, offsetof(device_t, config.output[1].__unused_pos) },
     { 48, false, UINT8,  1, offsetof(device_t, config.output[1].mouse_park_pos) },
     { 49, false, UINT8,  1, offsetof(device_t, config.output[1].screensaver.mode) },
     { 50, false, UINT8,  1, offsetof(device_t, config.output[1].screensaver.only_if_inactive) },
@@ -55,9 +55,9 @@ const field_map_t api_field_map[] = {
     { 72, false, UINT8,  1, offsetof(device_t, config.force_kbd_boot_protocol) },
     { 73, false, UINT8,  1, offsetof(device_t, config.kbd_led_as_indicator) },
     { 74, false, UINT8,  1, offsetof(device_t, config.hotkey_toggle) },
-    { 75, false, UINT8,  1, offsetof(device_t, config.enable_acceleration) },
+    { 75, false, UINT8,  1, offsetof(device_t, config.__unused_enable_acceleration) },
     { 76, false, UINT8,  1, offsetof(device_t, config.enforce_ports) },
-    { 77, false, UINT16, 2, offsetof(device_t, config.jump_threshold) },
+    { 77, false, UINT16, 2, offsetof(device_t, config.__unused_jump_threshold) },
 
     /* Firmware */
     { 78, true,  UINT16, 2, offsetof(device_t, _running_fw.version) },
