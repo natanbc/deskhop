@@ -67,7 +67,6 @@ const uart_handler_t uart_handler[] = {
     /* Box control */
     {.type = MOUSE_ZOOM_MSG, .handler = handle_mouse_zoom_msg},
     {.type = KBD_SET_REPORT_MSG, .handler = handle_set_report_msg},
-    {.type = SYNC_BORDERS_MSG, .handler = handle_sync_borders_msg},
     {.type = FLASH_LED_MSG, .handler = handle_flash_led_msg},
     {.type = CONSUMER_CONTROL_MSG, .handler = handle_consumer_control_msg},
     {.type = SCREENSAVER_MSG, .handler = handle_screensaver_msg},
