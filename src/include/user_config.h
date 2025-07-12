@@ -16,11 +16,11 @@
  * you can use them as a convenient way to indicate which output is selected.
  *
  * KBD_LED_AS_INDICATOR set to 0 will use the keyboard LEDs as normal.
- * KBD_LED_AS_INDICATOR set to 1 will use the Caps Lock LED as indicator.
+ * KBD_LED_AS_INDICATOR set to 1 will use the Scroll Lock LED as indicator.
  *
  * */
 
-#define KBD_LED_AS_INDICATOR 0
+#define KBD_LED_AS_INDICATOR 1
 
 /**===================================================== *
  * ===========  Hotkey for output switching  =========== *
