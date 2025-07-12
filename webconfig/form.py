@@ -29,8 +29,6 @@ STATUS_ = [
 CONFIG_ = [
     FormField(1001, "Mouse", elem="label"),
     FormField(71, "Force Mouse Boot Mode", None, {}, "uint8", "checkbox"),
-    FormField(75, "Enable Acceleration", None, {}, "uint8", "checkbox"),
-    FormField(77, "Jump Threshold", 0, {"min": 0, "max": 3000}, "uint16", "range"),
 
     FormField(1002, "Keyboard", elem="label"),
     FormField(72, "Force KBD Boot Protocol", None, {}, "uint8", "checkbox"),
@@ -40,13 +38,7 @@ CONFIG_ = [
 ]
 
 OUTPUT_ = [
-    FormField(1, "Screen Count", 1, {1: "1", 2: "2", 3: "3"}, "uint32"),
-    FormField(2, "Speed X", 16, {"min": 1, "max": 100}, "int32", "range"),
-    FormField(3, "Speed Y", 16, {"min": 1, "max": 100}, "int32", "range"),
-    FormField(4, "Border Top", None, {}, "int32"),
-    FormField(5, "Border Bottom", None, {}, "int32"),
     FormField(6, "Operating System", 1, {1: "Linux", 2: "MacOS", 3: "Windows", 4: "Android", 255: "Other"}, "uint8"),
-    FormField(7, "Screen Position", 1, {1: "Left", 2: "Right"}, "uint8"),
     FormField(8, "Cursor Park Position", 0, {0: "Top", 1: "Bottom", 3: "Previous"}, "uint8"),
     FormField(1003, "Screensaver", elem="label"),
     FormField(9, "Mode", 0, {0: "Disabled", 1: "Pong", 2: "Jitter"}, "uint8"),
