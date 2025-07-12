@@ -65,12 +65,12 @@ void tud_hid_set_report_cb(uint8_t instance,
 
     uint8_t leds = buffer[0];
 
-    /* If we are using caps lock LED to indicate the chosen output, that has priority */
+    /* If we are using scroll lock LED to indicate the chosen output, that has priority */
     if (global_state.config.kbd_led_as_indicator) {
-        leds = leds & 0xFD; /* 1111 1101 (Clear Caps Lock bit) */
+        leds = leds & ~KEYBOARD_LED_SCROLLLOCK;
 
         if (global_state.active_output)
-            leds |= KEYBOARD_LED_CAPSLOCK;
+            leds |= KEYBOARD_LED_SCROLLLOCK;
     }
 
     global_state.keyboard_leds[BOARD_ROLE] = leds;
