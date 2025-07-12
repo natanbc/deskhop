@@ -21,30 +21,11 @@ void output_toggle_hotkey_handler(device_t *state, hid_keyboard_report_t *report
     set_active_output(state, state->active_output);
 };
 
-void _get_border_position(device_t *state, border_size_t *border) {
-    /* To avoid having 2 different keys, if we're above half, it's the top coord */
-    if (state->pointer_y > (MAX_SCREEN_COORD / 2))
-        border->bottom = state->pointer_y;
-    else
-        border->top = state->pointer_y;
-}
-
 void _screensaver_set(device_t *state, uint8_t value) {
     if (CURRENT_BOARD_IS_ACTIVE_OUTPUT)
         state->config.output[BOARD_ROLE].screensaver.mode = value;
     else
         send_value(value, SCREENSAVER_MSG);
-};
-
-/* This key combo records switch y top coordinate for different-size monitors  */
-void screen_border_hotkey_handler(device_t *state, hid_keyboard_report_t *report) {
-    border_size_t *border = &state->config.output[state->active_output].border;
-    if (CURRENT_BOARD_IS_ACTIVE_OUTPUT) {
-        _get_border_position(state, border);
-        save_config(state);
-    }
-
-    queue_packet((uint8_t *)border, SYNC_BORDERS_MSG, sizeof(border_size_t));
 };
 
 /* This key combo puts board A in firmware upgrade mode */
@@ -198,19 +179,6 @@ void handle_set_report_msg(uart_packet_t *packet, device_t *state) {
     /* If we have a keyboard we can control leds on, restore state if active */
     if (global_state.keyboard_connected && !CURRENT_BOARD_IS_ACTIVE_OUTPUT)
         restore_leds(state);
-}
-
-/* Handle border syncing message that lets the other device know about monitor height offset */
-void handle_sync_borders_msg(uart_packet_t *packet, device_t *state) {
-    border_size_t *border = &state->config.output[state->active_output].border;
-
-    if (CURRENT_BOARD_IS_ACTIVE_OUTPUT) {
-        _get_border_position(state, border);
-        queue_packet((uint8_t *)border, SYNC_BORDERS_MSG, sizeof(border_size_t));
-    } else
-        memcpy(border, packet->data, sizeof(border_size_t));
-
-    save_config(state);
 }
 
 /* When this message is received, flash the locally attached LED to verify serial comms */

@@ -66,13 +66,6 @@ hotkey_combo_t hotkeys[] = {
      .acknowledge    = true,
      .action_handler = &wipe_config_hotkey_handler},
 
-    /* Record switch y coordinate  */
-    {.modifier       = KEYBOARD_MODIFIER_RIGHTSHIFT,
-     .keys           = {HID_KEY_F12, HID_KEY_Y},
-     .key_count      = 2,
-     .acknowledge    = true,
-     .action_handler = &screen_border_hotkey_handler},
-
     /* Switch to configuration mode  */
     {.modifier       = KEYBOARD_MODIFIER_LEFTCTRL | KEYBOARD_MODIFIER_RIGHTSHIFT,
      .keys           = {HID_KEY_C, HID_KEY_O},
