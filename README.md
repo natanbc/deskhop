@@ -122,10 +122,6 @@ This will make sure you won't accidentally leave your current screen. To turn of
 You can lock both computers at once by using ```RIGHT CTRL + L```.
 To make use of this feature, first set up the OS for each output in config (since the shortcuts are different).
 
-### Gaming Mode
-
-If you're gaming, there is a chance your game might not work properly with absolute mouse mode. To address that issue, a **gaming mode** is introduced, toggled by ```LEFT CTRL + RIGHT SHIFT + G```. When in gaming mode, you are locked to the current screen and your mouse behaves like a standard relative mouse. This should also fix various virtual machine issues, currently unsupported operating systems etc.
-
 ### Screensaver
 
 Supposedly built in to prevent computer from entering standby, but truth be told - it is just fun to watch. **Off by default**, will make your mouse pointer bounce around the screen like a Pong ball. When enabled, it activates after a period of inactivity defined in user config header and automatically switches off as soon as you send any output towards that screen.
@@ -243,7 +239,6 @@ _Usage_:
 - ```Right CTRL + Right ALT``` - Toggle slower mouse mode
 - ```Right CTRL + K``` - Lock/Unlock mouse desktop switching
 - ```Right CTRL + L``` - Lock both outputs at once (set output OS before, see shortcuts below)
-- ~~```Left Shift```~~ ```Left CTRL + Right Shift + G``` - Toggle gaming mode (lock to screen, act as standard mouse)
 - ```Left CTRL + Right Shift + S``` - Enable screensaver
 - ```Left CTRL + Right Shift + X``` - Disable screensaver
 - ```Left CTRL + Caps Lock``` - Switch between outputs
@@ -396,7 +391,6 @@ So, what's the deal with all the enthusiasm? I can't believe it - please allow m
 Planned features:
 
 - Better workarounds for multiscreen windows and macos
-- Transparent / Gaming mode
 - Support for more than 2 outputs
 - Improvements on the configuration UI
 - ... and more!

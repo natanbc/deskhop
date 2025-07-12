@@ -67,12 +67,6 @@ void switchlock_hotkey_handler(device_t *state, hid_keyboard_report_t *report) {
     send_value(state->switch_lock, SWITCH_LOCK_MSG);
 }
 
-/* This key combo toggles gaming mode */
-void toggle_gaming_mode_handler(device_t *state, hid_keyboard_report_t *report) {
-    state->gaming_mode ^= 1;
-    send_value(state->gaming_mode, GAMING_MODE_MSG);
-};
-
 /* This key combo locks both outputs simultaneously */
 void screenlock_hotkey_handler(device_t *state, hid_keyboard_report_t *report) {
     hid_keyboard_report_t lock_report = {0}, release_keys = {0};
@@ -268,11 +262,6 @@ void handle_reboot_msg(uart_packet_t *packet, device_t *state) {
 /* Decapsulate and send to the other box */
 void handle_proxy_msg(uart_packet_t *packet, device_t *state) {
     queue_packet(&packet->data[1], (enum packet_type_e)packet->data[0], PACKET_DATA_LENGTH - 1);
-}
-
-/* Process relative mouse command */
-void handle_toggle_gaming_msg(uart_packet_t *packet, device_t *state) {
-    state->gaming_mode = packet->data[0];
 }
 
 /* Process api communication messages */

@@ -45,13 +45,6 @@ hotkey_combo_t hotkeys[] = {
      .acknowledge    = true,
      .action_handler = &screenlock_hotkey_handler},
 
-    /* Toggle gaming mode */
-    {.modifier       = KEYBOARD_MODIFIER_LEFTCTRL | KEYBOARD_MODIFIER_RIGHTSHIFT,
-     .keys           = {HID_KEY_G},
-     .key_count      = 1,
-     .acknowledge    = true,
-     .action_handler = &toggle_gaming_mode_handler},
-
     /* Enable screensaver pong for active output */
     {.modifier       = KEYBOARD_MODIFIER_LEFTCTRL | KEYBOARD_MODIFIER_RIGHTSHIFT,
      .keys           = {HID_KEY_S},

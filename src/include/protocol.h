@@ -25,7 +25,6 @@ enum packet_type_e {
     WIPE_CONFIG_MSG      = 10,
     SCREENSAVER_MSG      = 11,
     HEARTBEAT_MSG        = 12,
-    GAMING_MODE_MSG      = 13,
     CONSUMER_CONTROL_MSG = 14,
     SYSTEM_CONTROL_MSG   = 15,
     SAVE_CONFIG_MSG      = 18,

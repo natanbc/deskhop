@@ -139,8 +139,7 @@ typedef struct {
     bool mouse_zoom;         // True when "mouse zoom" is enabled
     bool switch_lock;        // True when device is prevented from switching
     bool onboard_led_state;  // True when LED is ON
-    bool relative_mouse;     // True when relative mouse mode is used
-    bool gaming_mode;        // True when gaming mode is on (relative passthru + lock)
+    bool __unused_relative_mouse;
     bool config_mode_active; // True when config mode is active
     bool digitizer_active;   // True when digitizer Win/Mac workaround is active
 
