@@ -137,7 +137,7 @@ typedef struct {
 
     /* Feature flags */
     bool mouse_zoom;         // True when "mouse zoom" is enabled
-    bool switch_lock;        // True when device is prevented from switching
+    bool __unused_switch_lock;        // True when device is prevented from switching
     bool onboard_led_state;  // True when LED is ON
     bool __unused_relative_mouse;
     bool config_mode_active; // True when config mode is active

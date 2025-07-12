@@ -17,10 +17,6 @@
 
 /* This is the main hotkey for switching outputs */
 void output_toggle_hotkey_handler(device_t *state, hid_keyboard_report_t *report) {
-    /* If switching explicitly disabled, return immediately */
-    if (state->switch_lock)
-        return;
-
     state->active_output ^= 1;
     set_active_output(state, state->active_output);
 };
@@ -60,12 +56,6 @@ void fw_upgrade_hotkey_handler_A(device_t *state, hid_keyboard_report_t *report)
 void fw_upgrade_hotkey_handler_B(device_t *state, hid_keyboard_report_t *report) {
     send_value(ENABLE, FIRMWARE_UPGRADE_MSG);
 };
-
-/* This key combo prevents mouse from switching outputs */
-void switchlock_hotkey_handler(device_t *state, hid_keyboard_report_t *report) {
-    state->switch_lock ^= 1;
-    send_value(state->switch_lock, SWITCH_LOCK_MSG);
-}
 
 /* This key combo locks both outputs simultaneously */
 void screenlock_hotkey_handler(device_t *state, hid_keyboard_report_t *report) {
@@ -208,11 +198,6 @@ void handle_set_report_msg(uart_packet_t *packet, device_t *state) {
     /* If we have a keyboard we can control leds on, restore state if active */
     if (global_state.keyboard_connected && !CURRENT_BOARD_IS_ACTIVE_OUTPUT)
         restore_leds(state);
-}
-
-/* Process request to block mouse from switching, update internal state */
-void handle_switch_lock_msg(uart_packet_t *packet, device_t *state) {
-    state->switch_lock = packet->data[0];
 }
 
 /* Handle border syncing message that lets the other device know about monitor height offset */

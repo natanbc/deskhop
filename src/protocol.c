@@ -64,7 +64,7 @@ const field_map_t api_field_map[] = {
     { 79, true,  UINT32, 4, offsetof(device_t, _running_fw.checksum) },
 
     { 80, true,  UINT8,  1, offsetof(device_t, keyboard_connected) },
-    { 81, true,  UINT8,  1, offsetof(device_t, switch_lock) },
+    { 81, true,  UINT8,  1, offsetof(device_t, __unused_switch_lock) },
     { 82, true,  UINT8,  1, offsetof(device_t, __unused_relative_mouse) },
 };
 

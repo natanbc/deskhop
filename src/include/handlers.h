@@ -29,7 +29,6 @@ void output_config_hotkey_handler(device_t *, hid_keyboard_report_t *);
 void output_toggle_hotkey_handler(device_t *, hid_keyboard_report_t *);
 void screen_border_hotkey_handler(device_t *, hid_keyboard_report_t *);
 void screenlock_hotkey_handler(device_t *, hid_keyboard_report_t *);
-void switchlock_hotkey_handler(device_t *, hid_keyboard_report_t *);
 void wipe_config_hotkey_handler(device_t *, hid_keyboard_report_t *);
 
 /*==============================================================================
@@ -55,7 +54,6 @@ void handle_response_byte_msg(uart_packet_t *, device_t *);
 void handle_save_config_msg(uart_packet_t *, device_t *);
 void handle_screensaver_msg(uart_packet_t *, device_t *);
 void handle_set_report_msg(uart_packet_t *, device_t *);
-void handle_switch_lock_msg(uart_packet_t *, device_t *);
 void handle_sync_borders_msg(uart_packet_t *, device_t *);
 void handle_wipe_config_msg(uart_packet_t *, device_t *);
 void handle_write_fw_msg(uart_packet_t *, device_t *);

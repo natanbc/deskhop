@@ -31,13 +31,6 @@ hotkey_combo_t hotkeys[] = {
      .acknowledge    = true,
      .action_handler = &mouse_zoom_hotkey_handler},
 
-    /* Switch lock */
-    {.modifier       = KEYBOARD_MODIFIER_RIGHTCTRL,
-     .keys           = {HID_KEY_K},
-     .key_count      = 1,
-     .acknowledge    = true,
-     .action_handler = &switchlock_hotkey_handler},
-
     /* Screen lock */
     {.modifier       = KEYBOARD_MODIFIER_RIGHTCTRL,
      .keys           = {HID_KEY_L},

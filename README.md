@@ -237,7 +237,6 @@ _Config_:
 _Usage_:
 
 - ```Right CTRL + Right ALT``` - Toggle slower mouse mode
-- ```Right CTRL + K``` - Lock/Unlock mouse desktop switching
 - ```Right CTRL + L``` - Lock both outputs at once (set output OS before, see shortcuts below)
 - ```Left CTRL + Right Shift + S``` - Enable screensaver
 - ```Left CTRL + Right Shift + X``` - Disable screensaver
