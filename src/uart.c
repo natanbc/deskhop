@@ -70,7 +70,6 @@ const uart_handler_t uart_handler[] = {
     {.type = SWITCH_LOCK_MSG, .handler = handle_switch_lock_msg},
     {.type = SYNC_BORDERS_MSG, .handler = handle_sync_borders_msg},
     {.type = FLASH_LED_MSG, .handler = handle_flash_led_msg},
-    {.type = GAMING_MODE_MSG, .handler = handle_toggle_gaming_msg},
     {.type = CONSUMER_CONTROL_MSG, .handler = handle_consumer_control_msg},
     {.type = SCREENSAVER_MSG, .handler = handle_screensaver_msg},
 
